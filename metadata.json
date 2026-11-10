@@ -1,0 +1,6 @@
+{
+  "name": "QEVORIN – Morocco E-Commerce Platform",
+  "description": "Independent premium Moroccan e-commerce store with Cash on Delivery, full Arabic & French support, MAD pricing, and administrative dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom smooth scroll and luxury subtle transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tabular figures for pricing and quantities */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
