@@ -1,15 +1,11 @@
 import pg from 'pg';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 const { Pool } = pg;
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export function getDatabaseUrl(): string | undefined {
   return process.env.DATABASE_URL || process.env.DIRECT_URL;
@@ -230,7 +226,7 @@ export async function runNeonMigration(): Promise<{ success: boolean; message: s
 
   const client = await getClient();
   try {
-    const schemaPath = path.resolve(__dirname, 'schema.sql');
+    const schemaPath = path.resolve(process.cwd(), 'server', 'schema.sql');
     if (!fs.existsSync(schemaPath)) {
       return { success: false, message: 'schema.sql file not found.' };
     }
